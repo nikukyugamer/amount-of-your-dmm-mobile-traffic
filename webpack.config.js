@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   node: {
-    fs: "empty"
+    fs: 'empty'
   },
   externals: {
     puppeteer: 'require("puppeteer")'
