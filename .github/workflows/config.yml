@@ -1,0 +1,21 @@
+name: Amount of Your DMM mobile Traffic
+on:
+  push:
+jobs:
+  continuous_integration:
+    name: lets_CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: yarn install
+        run: |
+          yarn install
+      - name: test
+        run: |
+          yarn test

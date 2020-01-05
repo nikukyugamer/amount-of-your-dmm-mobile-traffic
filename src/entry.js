@@ -1,0 +1,1 @@
+import amountOfYourDmmMobileTraffic from './amountOfYourDmmMobileTraffic';
