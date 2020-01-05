@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic)
+
 # DMMモバイルのマイページ内の「データ通信量照会」のデータを取得する
 
 ![データ通信量照会_01](docs/dmm_mobile_data_traffic_info_table_01.png "データ通信量照会_01")
