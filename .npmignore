@@ -15,3 +15,6 @@ prettier.config.js
 tsconfig.json
 webpack.config.js
 yarn.lock
+yarn-error.log
+.eslintrc.js
+.node-version
