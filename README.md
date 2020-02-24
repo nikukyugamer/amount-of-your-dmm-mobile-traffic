@@ -61,3 +61,7 @@ $ node public/bundle.js
 ```bash
 $ npm link
 ```
+
+# エラーメッセージとその対応策
+- `UnhandledPromiseRejectionWarning: TypeError: text is not iterable at Keyboard.type`
+  - ユーザ名とパスワード（環境変数）は設定されていますか？

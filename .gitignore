@@ -82,7 +82,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/bundle.js
 
 # Gatsby files
 .cache/
@@ -108,3 +108,9 @@ dist
 # 除外ファイル
 !public/.keep
 !logs/.keep
+
+dmm_mobile_data_traffic_result.csv
+
+# npm link で生成されるので、除外する
+package-lock.json
+
