@@ -3,13 +3,14 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/entry.js'],
+  entry: path.resolve(__dirname, './src/entry.js'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
+    __dirname: false
   },
   externals: {
     puppeteer: 'require("puppeteer")'
