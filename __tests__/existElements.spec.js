@@ -4,7 +4,7 @@ const filePath =
   path.resolve(__dirname, './dmm_mobile_data_traffic_info_sample.html');
 let eachDayRowSelector;
 let targetTrElements;
-// let targetCells = [];
+let targetTdElements;
 let resultDataArray = [];
 
 describe('要素が存在するかどうかのテスト', () => {
