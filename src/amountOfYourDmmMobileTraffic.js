@@ -1,6 +1,8 @@
 require('dotenv').config();
 const puppeteer = require('puppeteer');
 const path = require('path');
+const fs = require('fs');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 const dmmMobileClient = async () => {
   const browser = await puppeteer.launch();
@@ -39,6 +41,41 @@ const dmmMobileClient = async () => {
     resultDataArray.push(eachRowDataArray);
   }
 
+  // CSVファイルがすでに存在していた場合は削除する
+  // https://github.com/ryu1kn/csv-writer/issues/26
+  const outputCSVFilePath = path.resolve(
+    __dirname,
+    './dmm_mobile_data_traffic_result.csv'
+  );
+  if (fs.existsSync(outputCSVFilePath)) {
+    fs.unlinkSync(outputCSVFilePath);
+  }
+
+  const csvWriter = createCsvWriter({
+    path: outputCSVFilePath,
+    header: [
+      { id: 'date', title: '日付' },
+      { id: 'amountOfFastDataTraffic', title: '高速データ通信量' },
+      { id: 'amountOfSlowDataTraffic', title: '低速データ通信量' },
+      { id: 'amountOfSNSFreeTraffic', title: 'SNSフリー通信量' }
+    ]
+  });
+
+  let targetRecords = [];
+  let eachRecordObject = {};
+  for (let m = 0; m < resultDataArray.length; m++) {
+    eachRecordObject = {
+      date: resultDataArray[m][0],
+      amountOfFastDataTraffic: resultDataArray[m][1],
+      amountOfSlowDataTraffic: resultDataArray[m][2],
+      amountOfSNSFreeTraffic: resultDataArray[m][3]
+    };
+
+    targetRecords.push(eachRecordObject);
+  }
+
+  await csvWriter.writeRecords(targetRecords);
+
   // Printデバッグ
   // console.log(resultDataArray.length);
 
@@ -56,4 +93,4 @@ const dmmMobileClient = async () => {
   await browser.close();
 };
 
-// dmmMobileClient();
+dmmMobileClient();
