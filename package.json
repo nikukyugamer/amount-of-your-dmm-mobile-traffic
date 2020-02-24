@@ -24,6 +24,7 @@
   "dependencies": {
     "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.7.0",
     "puppeteer": "^2.0.0"
   },
   "scripts": {
