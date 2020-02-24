@@ -1,6 +1,8 @@
 [![CircleCI](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic) ![GitHub Actions Status](https://github.com/corselia/amount-of-your-dmm-mobile-traffic/workflows/Amount%20of%20Your%20DMM%20mobile%20Traffic/badge.svg)
 
 # DMMモバイルのマイページ内の「データ通信量照会」のデータを取得する
+- 実行時間は、約90秒です
+- あまりに短い間隔で実行すると、BAN的なことをされる可能性があるかもしれません
 
 ![データ通信量照会_01](docs/dmm_mobile_data_traffic_info_table_01.png "データ通信量照会_01")
 

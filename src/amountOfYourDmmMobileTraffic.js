@@ -1,10 +1,11 @@
 require('dotenv').config();
 const puppeteer = require('puppeteer');
-const path = require('path');
 const fs = require('fs');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-const dmmMobileClient = async () => {
+module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
+  // TODO: ユーザ名とパスワードが設定されていなかった場合、例外を吐いて止める
+
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -13,13 +14,24 @@ const dmmMobileClient = async () => {
   );
 
   await page.goto('https://mvno.dmm.com/mypage/-/datatraffic/');
-  await page.waitFor(1000);
+  await page.waitFor(5000);
 
   await page.type('#login_id', process.env.DMM_USERNAME, { delay: 1000 });
   await page.type('#password', process.env.DMM_PASSWORD, { delay: 1000 });
   await page.click('#loginbutton_script_on > span > input[type=submit]');
 
-  await page.waitFor(3000);
+  await page.waitFor(5000);
+
+  const targetOptionElement = '#fn-number > option';
+  targetOptions = await page.$$(targetOptionElement);
+
+  const targetValue = await (
+    await targetOptions[ordinalNumberOfTelephoneNumber - 1].getProperty('value')
+  ).jsonValue();
+  await page.select('#fn-number', targetValue.trim());
+
+  // TODO: 待ちすぎ
+  await page.waitFor(10000);
 
   const eachDayRowSelector =
     'body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr';
@@ -43,10 +55,8 @@ const dmmMobileClient = async () => {
 
   // CSVファイルがすでに存在していた場合は削除する
   // https://github.com/ryu1kn/csv-writer/issues/26
-  const outputCSVFilePath = path.resolve(
-    __dirname,
-    './dmm_mobile_data_traffic_result.csv'
-  );
+  // '__dirname' で 'outputCSVFilePath' を指定すると、CLI の実行時にうまくいかない
+  const outputCSVFilePath = './amount_of_dmm_mobile.csv';
   if (fs.existsSync(outputCSVFilePath)) {
     fs.unlinkSync(outputCSVFilePath);
   }
@@ -76,21 +86,11 @@ const dmmMobileClient = async () => {
 
   await csvWriter.writeRecords(targetRecords);
 
-  // Printデバッグ
-  // console.log(resultDataArray.length);
-
-  // TODO: CSV出力
-
   // スクリーンショットによるデバッグ
   // await page.screenshot({
-  //   path: path.resolve(
-  //     __dirname,
-  //     '../logs/dmm_mobile_data_traffic_info_debug.png'
-  //   ),
+  //   path: './dmm_mobile_data_traffic_info_debug.png',
   //   fullPage: true
   // });
 
   await browser.close();
 };
-
-dmmMobileClient();

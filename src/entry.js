@@ -1,1 +1,1 @@
-import amountOfYourDmmMobileTraffic from './amountOfYourDmmMobileTraffic';
+import AmountOfYourDmmMobileTraffic from './amountOfYourDmmMobileTraffic';
