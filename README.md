@@ -8,6 +8,11 @@
 
 ![データ通信量照会_02](docs/dmm_mobile_data_traffic_info_table_02.png "データ通信量照会_02")
 
+# 出力されるCSV
+- [__tests__/dmm_mobile_data_traffic_result.csv](__tests__/dmm_mobile_data_traffic_result.csv)
+
+![出力されるCSV](docs/dmm_mobile_data_traffic_csv.png "出力されるCSV")
+
 ## HTML の構造
 - サンプルファイル（テスト時にも使用）を用意した。
   - [__tests__/dmm_mobile_data_traffic_info_sample.html](__tests__/dmm_mobile_data_traffic_info_sample.html)
