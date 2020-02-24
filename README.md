@@ -16,6 +16,14 @@ $ npm install amount-dmm-mobile
 $ yarn add amount-dmm-mobile
 ```
 
+#### 準備
+コマンドを実行するディレクトリに `.env` ファイルを作り、そのファイルの中に DMM の ID（メールアドレス）とパスワードを以下のように設定して下さい。
+
+```
+DMM_USERNAME=foobar@example.com
+DMM_PASSWORD=your_password
+```
+
 #### 使い方
 以下のコマンドを実行すると、実行したディレクトリに `amount_of_dmm_mobile.csv` という料金データが記録された CSV ファイル が生成されます。
 
