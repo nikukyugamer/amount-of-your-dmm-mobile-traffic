@@ -1,0 +1,17 @@
+__tests__/
+.circleci/
+.github/
+.history/
+dist/
+docs/
+logs/
+node_modules/
+src/entry.js
+.env
+.env.sample
+jest-puppeteer.config.js
+jest.config.js
+prettier.config.js
+tsconfig.json
+webpack.config.js
+yarn.lock
