@@ -7,6 +7,8 @@
 ![データ通信量照会_02](docs/dmm_mobile_data_traffic_info_table_02.png "データ通信量照会_02")
 
 ## HTML の構造
+- サンプルファイル（テスト時にも使用）を用意した。
+  - [__tests__/dmm_mobile_data_traffic_info_sample.html](__tests__/dmm_mobile_data_traffic_info_sample.html)
 
 ### 電話番号 の部分
 - 1つ目の電話番号
@@ -41,3 +43,16 @@
 - `body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr:nth-child(30) > td:nth-child(2)`
 - `body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr:nth-child(30) > td:nth-child(3)`
 - `body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr:nth-child(30) > td:nth-child(4)`
+
+# (WIP) 開発方法
+
+```bash
+$ yarn build
+$ node public/bundle.js
+```
+
+# (WIP) 開発中のパッケージをローカルにインストールする方法
+
+```bash
+$ npm link
+```
