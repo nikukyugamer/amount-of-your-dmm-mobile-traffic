@@ -47,7 +47,7 @@ $ amount_dmm_mobile --help
 Usage: amount_dmm_mobile [options]
 
 Options:
-  -n, --number <number>  A Nth number which indicates the Nth telepone number
+  -n, --number <number>  A Nth number which indicates the Nth telephone number
                          in "My Page" (default: "1")
   -h, --help             output usage information
 ```
