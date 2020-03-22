@@ -7,7 +7,7 @@ class AmountOfYourDmmMobileTraffic {
   constructor() {
     program.option(
       '-n, --number <number>',
-      'A Nth number which indicates the Nth telepone number in "My Page"',
+      'A Nth number which indicates the Nth telephone number in "My Page"',
       '1'
     );
 
