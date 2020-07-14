@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/amount-dmm-mobile.png)](https://nodei.co/npm/amount-dmm-mobile/)
 
-[![CircleCI](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic) ![GitHub Actions Status](https://github.com/corselia/amount-of-your-dmm-mobile-traffic/workflows/Amount%20of%20Your%20DMM%20mobile%20Traffic/badge.svg)
+[![CircleCI](https://circleci.com/gh/nikukyugamer/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/nikukyugamer/amount-of-your-dmm-mobile-traffic) ![GitHub Actions Status](https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic/workflows/Amount%20of%20Your%20DMM%20mobile%20Traffic/badge.svg)
 
 # DMMモバイルのマイページ内の「データ通信量照会」のデータを取得する
 
