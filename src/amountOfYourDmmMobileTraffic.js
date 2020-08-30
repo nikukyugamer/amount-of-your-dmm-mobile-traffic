@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
+module.exports = dmmMobileClient = async (ordinalNumberOfTelephoneNumber) => {
   // TODO: ユーザ名とパスワードが設定されていなかった場合、例外を吐いて止める
 
   const browser = await puppeteer.launch();
@@ -14,7 +14,7 @@ module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
   );
 
   await page.goto('https://mvno.dmm.com/mypage/-/datatraffic/');
-  await page.waitFor(5000);
+  await page.waitFor(10000);
 
   await page.type('#login_id', process.env.DMM_USERNAME, { delay: 1000 });
   await page.type('#password', process.env.DMM_PASSWORD, { delay: 1000 });
@@ -22,19 +22,21 @@ module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
 
   await page.waitFor(5000);
 
-  const targetOptionElement = '#fn-number > option';
-  targetOptions = await page.$$(targetOptionElement);
+  // TODO: セレクタが変わっていたのでいったんコメントアウト（複数電話番号はいったん未対応へ）
+  // const targetOptionElement = '#fn-number > option';
+  // targetOptions = await page.$$(targetOptionElement);
 
-  const targetValue = await (
-    await targetOptions[ordinalNumberOfTelephoneNumber - 1].getProperty('value')
-  ).jsonValue();
-  await page.select('#fn-number', targetValue.trim());
+  // const targetValue = await (
+  //   await targetOptions[ordinalNumberOfTelephoneNumber - 1].getProperty('value')
+  // ).jsonValue();
+  // await page.select('#fn-number', targetValue.trim());
 
-  // TODO: 待ちすぎ
   await page.waitFor(10000);
 
   const eachDayRowSelector =
-    'body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr';
+    'body > app-root > div > div.l-main > app-my-data-traffic > div > div.wrapper__main > main > div.main__content.ng-star-inserted > div > div.datatraffic__table.ng-star-inserted > table > tbody > tr';
+  // const eachDayRowSelector =
+  //   'body > section > div > section.area-right > section.box-recentCharge > div > table > tbody > tr';
   const targetTrElements = await page.$$(eachDayRowSelector);
   const resultDataArray = [];
 
@@ -67,8 +69,8 @@ module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
       { id: 'date', title: '日付' },
       { id: 'amountOfFastDataTraffic', title: '高速データ通信量' },
       { id: 'amountOfSlowDataTraffic', title: '低速データ通信量' },
-      { id: 'amountOfSNSFreeTraffic', title: 'SNSフリー通信量' }
-    ]
+      { id: 'amountOfSNSFreeTraffic', title: 'SNSフリー通信量' },
+    ],
   });
 
   let targetRecords = [];
@@ -78,7 +80,7 @@ module.exports = dmmMobileClient = async ordinalNumberOfTelephoneNumber => {
       date: resultDataArray[m][0],
       amountOfFastDataTraffic: resultDataArray[m][1],
       amountOfSlowDataTraffic: resultDataArray[m][2],
-      amountOfSNSFreeTraffic: resultDataArray[m][3]
+      amountOfSNSFreeTraffic: resultDataArray[m][3],
     };
 
     targetRecords.push(eachRecordObject);
