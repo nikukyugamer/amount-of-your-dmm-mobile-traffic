@@ -30,7 +30,7 @@ DMM_PASSWORD=your_password
 以下のコマンドを実行すると、実行したディレクトリに `amount_of_dmm_mobile.csv` という料金データが記録された CSV ファイル が生成されます。
 
 ```bash
-$ amount_dmm_mobile
+$ npx amount_dmm_mobile
 ```
 
 ##### 実行時オプション
@@ -71,7 +71,7 @@ Options:
 # 開発方法
 - コードを書く
 - `$ npm link` を実行してインストールする
-- `$ amount_dmm_mobile` を実行して動作を確かめる
+- `$ npx amount_dmm_mobile` を実行して動作を確かめる
 - 不要になったら `$ npm unlink` で削除する
 
 # エラーメッセージとその対応策
