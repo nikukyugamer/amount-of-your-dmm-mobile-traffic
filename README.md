@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/amount-dmm-mobile.png)](https://nodei.co/npm/amount-dmm-mobile/)
 
-[![CircleCI](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/corselia/amount-of-your-dmm-mobile-traffic) ![GitHub Actions Status](https://github.com/corselia/amount-of-your-dmm-mobile-traffic/workflows/Amount%20of%20Your%20DMM%20mobile%20Traffic/badge.svg)
+[![CircleCI](https://circleci.com/gh/nikukyugamer/amount-of-your-dmm-mobile-traffic.svg?style=svg)](https://circleci.com/gh/nikukyugamer/amount-of-your-dmm-mobile-traffic) ![GitHub Actions Status](https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic/workflows/Amount%20of%20Your%20DMM%20mobile%20Traffic/badge.svg)
 
 # DMMモバイルのマイページ内の「データ通信量照会」のデータを取得する
 
@@ -30,10 +30,13 @@ DMM_PASSWORD=your_password
 以下のコマンドを実行すると、実行したディレクトリに `amount_of_dmm_mobile.csv` という料金データが記録された CSV ファイル が生成されます。
 
 ```bash
-$ amount_dmm_mobile
+$ npx amount_dmm_mobile
 ```
 
-実行時オプションとして、`--number 2` のようにすると、2つ目の契約の番号のデータが得られます。デフォルトでは `--number 1` です。
+##### 実行時オプション
+~~実行時オプションとして、`--number 2` のようにすると、2つ目の契約の番号のデータが得られます。デフォルトでは `--number 1` です。~~
+
+セレクタの変更に伴い、以下の `--number` オプションはいったん無効となっています。
 
 ```bash
 $ amount_dmm_mobile --number 2
@@ -68,7 +71,7 @@ Options:
 # 開発方法
 - コードを書く
 - `$ npm link` を実行してインストールする
-- `$ amount_dmm_mobile` を実行して動作を確かめる
+- `$ npx amount_dmm_mobile` を実行して動作を確かめる
 - 不要になったら `$ npm unlink` で削除する
 
 # エラーメッセージとその対応策
