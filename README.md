@@ -33,7 +33,10 @@ DMM_PASSWORD=your_password
 $ amount_dmm_mobile
 ```
 
-実行時オプションとして、`--number 2` のようにすると、2つ目の契約の番号のデータが得られます。デフォルトでは `--number 1` です。
+##### 実行時オプション
+~~実行時オプションとして、`--number 2` のようにすると、2つ目の契約の番号のデータが得られます。デフォルトでは `--number 1` です。~~
+
+セレクタの変更に伴い、以下の `--number` オプションはいったん無効となっています。
 
 ```bash
 $ amount_dmm_mobile --number 2
