@@ -6,11 +6,27 @@
     "DMM Mobile",
     "Puppeteer"
   ],
-  "main": "src/amountOfYourDmmMobileTraffic.js",
-  "author": "Osamu Takiya",
+  "homepage": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic"
+  },
   "license": "MIT",
+  "author": "Osamu Takiya",
+  "main": "src/amountOfYourDmmMobileTraffic.js",
   "bin": {
     "amount_dmm_mobile": "cli.js"
+  },
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server",
+    "test": "jest"
+  },
+  "dependencies": {
+    "commander": ">=4.1.1",
+    "csv-writer": ">=1.6.0",
+    "dotenv": ">=8.2.0",
+    "puppeteer": ">=2.0.0"
   },
   "devDependencies": {
     "@babel/cli": ">=7.8.4",
@@ -31,21 +47,5 @@
     "webpack": ">=4.41.5",
     "webpack-cli": ">=3.3.10",
     "webpack-dev-server": ">=3.10.1"
-  },
-  "dependencies": {
-    "commander": ">=4.1.1",
-    "csv-writer": ">=1.6.0",
-    "dotenv": ">=8.2.0",
-    "puppeteer": ">=2.0.0"
-  },
-  "scripts": {
-    "test": "jest",
-    "build": "webpack",
-    "serve": "webpack-dev-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic"
-  },
-  "homepage": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic"
+  }
 }
