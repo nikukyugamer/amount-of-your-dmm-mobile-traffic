@@ -1,6 +1,6 @@
 {
   "name": "amount-dmm-mobile",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Export a CSV file which is as your DMM Mobile amount",
   "keywords": [
     "DMM Mobile",
