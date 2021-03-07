@@ -26,6 +26,12 @@ DMM_USERNAME=foobar@example.com
 DMM_PASSWORD=your_password
 ```
 
+あるいは、以下のようにコマンド実行時に直接環境変数を設定することもできます。アカウント情報が丸見えになってしまうことにはご注意ください。
+
+```sh
+$ DMM_USERNAME=foobar@example.com DMM_PASSWORD=hogehoge npx amount_dmm_mobile
+```
+
 #### 使い方
 以下のコマンドを実行すると、実行したディレクトリに `amount_of_dmm_mobile.csv` という料金データが記録された CSV ファイル が生成されます。
 
