@@ -14,13 +14,13 @@ module.exports = dmmMobileClient = async (ordinalNumberOfTelephoneNumber) => {
   );
 
   await page.goto('https://mvno.dmm.com/mypage/-/datatraffic/');
-  await page.waitFor(10000);
+  await page.waitForTimeout(10000);
 
   await page.type('#login_id', process.env.DMM_USERNAME, { delay: 1000 });
   await page.type('#password', process.env.DMM_PASSWORD, { delay: 1000 });
   await page.click('#loginbutton_script_on > span > input[type=submit]');
 
-  await page.waitFor(5000);
+  await page.waitForTimeout(5000);
 
   // TODO: セレクタが変わっていたのでいったんコメントアウト（複数電話番号はいったん未対応へ）
   // const targetOptionElement = '#fn-number > option';
@@ -31,7 +31,7 @@ module.exports = dmmMobileClient = async (ordinalNumberOfTelephoneNumber) => {
   // ).jsonValue();
   // await page.select('#fn-number', targetValue.trim());
 
-  await page.waitFor(10000);
+  await page.waitForTimeout(10000);
 
   const eachDayRowSelector =
     'body > app-root > div > div.l-main > app-my-data-traffic > div > div.wrapper__main > main > div.main__content.ng-star-inserted > div > div.datatraffic__table.ng-star-inserted > table > tbody > tr';
