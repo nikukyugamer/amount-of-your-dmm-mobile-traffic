@@ -34,7 +34,7 @@
     "@types/jest": "27.0.1",
     "@types/jest-environment-puppeteer": "4.4.1",
     "@types/puppeteer": "5.4.4",
-    "@typescript-eslint/eslint-plugin": "4.29.3",
+    "@typescript-eslint/eslint-plugin": "4.30.0",
     "@typescript-eslint/parser": "4.29.3",
     "babel-jest": "27.1.0",
     "dotenv-webpack": "7.0.3",
