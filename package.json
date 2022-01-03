@@ -1,26 +1,10 @@
 {
   "name": "amount-dmm-mobile",
-  "version": "1.0.5",
   "description": "Export a CSV file which is as your DMM Mobile amount",
-  "keywords": [
-    "DMM Mobile",
-    "Puppeteer"
-  ],
-  "homepage": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic"
-  },
-  "license": "MIT",
+  "version": "1.0.5",
   "author": "Osamu Takiya",
-  "main": "src/amountOfYourDmmMobileTraffic.js",
   "bin": {
     "amount_dmm_mobile": "cli.js"
-  },
-  "scripts": {
-    "build": "webpack",
-    "serve": "webpack-dev-server",
-    "test": "jest"
   },
   "dependencies": {
     "commander": ">=4.1.1",
@@ -47,5 +31,21 @@
     "webpack": "5.65.0",
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.7.2"
+  },
+  "homepage": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic",
+  "keywords": [
+    "DMM Mobile",
+    "Puppeteer"
+  ],
+  "license": "MIT",
+  "main": "src/amountOfYourDmmMobileTraffic.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikukyugamer/amount-of-your-dmm-mobile-traffic"
+  },
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server",
+    "test": "jest"
   }
 }
