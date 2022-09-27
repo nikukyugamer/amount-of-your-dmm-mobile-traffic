@@ -13,7 +13,7 @@
     "puppeteer": ">=2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.18.10",
+    "@babel/cli": "7.19.3",
     "@types/expect-puppeteer": "5.0.1",
     "@types/jest": "29.0.3",
     "@types/jest-environment-puppeteer": "5.0.2",
