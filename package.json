@@ -26,7 +26,7 @@
     "jest-puppeteer": "8.0.6",
     "nyc": "15.1.0",
     "ts-jest": "29.1.0",
-    "ts-loader": "9.4.2",
+    "ts-loader": "9.4.3",
     "typescript": "5.0.4",
     "webpack": "5.83.1",
     "webpack-cli": "5.1.1",
