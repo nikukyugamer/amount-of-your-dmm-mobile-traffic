@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
-    "@types/expect-puppeteer": "5.0.4",
+    "@types/expect-puppeteer": "5.0.5",
     "@types/jest": "29.5.5",
     "@types/jest-environment-puppeteer": "5.0.4",
     "@types/puppeteer": "5.4.7",
