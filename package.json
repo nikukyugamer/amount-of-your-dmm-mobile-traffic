@@ -16,7 +16,7 @@
     "@babel/cli": "7.23.0",
     "@types/expect-puppeteer": "5.0.6",
     "@types/jest": "29.5.7",
-    "@types/jest-environment-puppeteer": "5.0.5",
+    "@types/jest-environment-puppeteer": "5.0.6",
     "@types/puppeteer": "5.4.7",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",
