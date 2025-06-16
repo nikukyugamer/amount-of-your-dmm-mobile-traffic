@@ -15,7 +15,7 @@
   "devDependencies": {
     "@babel/cli": "7.27.2",
     "@types/expect-puppeteer": "5.0.6",
-    "@types/jest": "29.5.14",
+    "@types/jest": "30.0.0",
     "@types/jest-environment-puppeteer": "5.0.6",
     "@types/puppeteer": "7.0.4",
     "@typescript-eslint/eslint-plugin": "8.34.0",
