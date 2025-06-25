@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "8.35.0",
     "babel-jest": "30.0.2",
     "dotenv-webpack": "8.1.0",
-    "jest": "30.0.2",
+    "jest": "30.0.3",
     "jest-puppeteer": "11.0.0",
     "nyc": "17.1.0",
     "ts-jest": "29.4.0",
