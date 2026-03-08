@@ -3261,29 +3261,29 @@ dns-packet@^5.2.2:
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
 
-dotenv-defaults@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-2.0.2.tgz#6b3ec2e4319aafb70940abda72d3856770ee77ac"
-  integrity sha512-iOIzovWfsUHU91L5i8bJce3NYK5JXeAwH50Jh6+ARUdLiiGlYWfGw6UkzsYqaXZH/hjE/eCd/PlfM/qqyK0AMg==
+dotenv-defaults@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv-defaults/-/dotenv-defaults-5.0.2.tgz#065c410ea516011651e9c60dae0c8902ec53d609"
+  integrity sha512-y5z4NhblzwNk8XBIYVzjLcFkANK0rxbRDO6kGOfH9QrVYIGVEX52IqwSprKVsaLHM9pnNkCSxazZF/JPydDPvA==
   dependencies:
-    dotenv "^8.2.0"
+    dotenv "^14.0.0"
 
-dotenv-webpack@8.1.1:
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-8.1.1.tgz#4fd82b5ddb374639baad2384f95401bf657f63d4"
-  integrity sha512-+TY/AJ2k9bU2EML3mxgLmaAvEcqs1Wbv6deCIUSI3eW3Xeo8LBQumYib6puyaSwbjC9JCzg/y5Pwjd/lePX04w==
+dotenv-webpack@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv-webpack/-/dotenv-webpack-9.0.0.tgz#076f09a75788d167d1202a8176c3e5f56e08213b"
+  integrity sha512-uUtvrfEt+wXXadiZ/VvBYmLmd7KffMhsdaJLZmTTGaixFBZqD2emBwLsWKP4mdJ7bj11gxEcmH6EBFAoWwHrqA==
   dependencies:
-    dotenv-defaults "^2.0.2"
+    dotenv-defaults "^5.0.2"
 
 dotenv@>=8.2.0:
   version "17.2.3"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-17.2.3.tgz#ad995d6997f639b11065f419a22fabf567cdb9a2"
   integrity sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==
 
-dotenv@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
-  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+dotenv@^14.0.0:
+  version "14.3.2"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-14.3.2.tgz#7c30b3a5f777c79a3429cb2db358eef6751e8369"
+  integrity sha512-vwEppIphpFdvaMCaHfCEv9IgwcxMljMw2TnAQBB4VWPvzXQLTb82jwmdOKzlEVUL3gNFT4l4TPKO+Bn+sqcrVQ==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
