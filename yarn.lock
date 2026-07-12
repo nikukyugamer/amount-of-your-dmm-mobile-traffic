@@ -10,18 +10,17 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@babel/cli@8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-8.0.1.tgz#3deffe950ef5865770ce50978017b88aea270421"
-  integrity sha512-cttmeKZGho8XpXNz3nvGMjEnpDW5qkPVGNW2buav2byKxArJnBROsJrLA7CioPQhjzsZ26aZRqg+Gvpk+FHGEg==
+"@babel/cli@8.0.4":
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-8.0.4.tgz#b941c026bc0d6e674c363dc1c2cbf784207e2ca7"
+  integrity sha512-mgg9G7dJw7xzx/0Sn8eWQkDpEcQrlDdEV4Y4Ii+8Oay88+lK45vNuSavRUj4g+e5Yfw4tkH4U3ObBFOMJhy4oQ==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.28"
+    chokidar "^5.0.0"
     commander "^14.0.2"
     convert-source-map "^2.0.0"
     glob "^13.0.0"
     slash "^5.1.0"
-  optionalDependencies:
-    chokidar "^3.6.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.27.1":
   version "7.27.1"
@@ -2826,6 +2825,13 @@ chokidar@^3.6.0:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+chokidar@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-5.0.0.tgz#949c126a9238a80792be9a0265934f098af369a5"
+  integrity sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==
+  dependencies:
+    readdirp "^5.0.0"
 
 chrome-trace-event@^1.0.2:
   version "1.0.2"
@@ -5850,6 +5856,11 @@ readable-stream@^3.0.6:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
+
+readdirp@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-5.0.0.tgz#fbf1f71a727891d685bb1786f9ba74084f6e2f91"
+  integrity sha512-9u/XQ1pvrQtYyMpZe7DXKv2p5CNvyVwzUB6uhLAnQwHMSgKMBR62lc7AHljaeteeHXn11XTAaLLUVZYVZyuRBQ==
 
 readdirp@~3.6.0:
   version "3.6.0"
