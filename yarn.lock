@@ -10,10 +10,10 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@babel/cli@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-8.1.0.tgz#e68865491637e62459d05414b4950ffebb708e46"
-  integrity sha512-C4fCHysy+LdXz6nsk59mAKoYBrYTxkbJb6sCEqyx1E8C5+77dEc4I4FjmIO6crtWvHxvn+sL5VD/tIjtQMYceQ==
+"@babel/cli@8.1.4":
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/@babel/cli/-/cli-8.1.4.tgz#edbc0e19dc63325fc42a3fcabac0f679d4a7dbf2"
+  integrity sha512-BrOkNZGcBQ6LZ8kRBkcHOBoZmdqC5GqxwTmlcdITvuK+LDe7Xh52/MTivDcLQxMzD1XIA8GHpIpjJufWUt6NrQ==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.31"
     chokidar "^5.0.0"
